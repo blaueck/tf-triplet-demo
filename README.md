@@ -35,3 +35,4 @@ One way to work around this memory issue is separating hard mining and training 
 
 # Reference Project
 - [facenet](https://github.com/davidsandberg/facenet), Face recognition using Tensorflow.
+- [openface](https://github.com/cmusatyalab/openface), Face recognition with deep neural networks. 
