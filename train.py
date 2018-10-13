@@ -2,7 +2,8 @@ import os
 # set tensorflow cpp log level. It is useful
 # to diable some annoying log message, but sometime
 #  may miss some useful imformation.
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES']='3'
 
 import argparse
 import importlib
@@ -288,7 +289,7 @@ def main(FLAGS):
 
         v_jpg_str = feat2emb(np.concatenate(v_flist, axis=0),
                              np.concatenate(v_llist, axis=0),
-                             TSNE_transform if FLAGS.n_feats > 2 else None)
+                             TSNE_transform if int(FLAGS.n_feats) > 2 else None)
 
         val_writer.add_summary(sess.run(metric_summary_str),
                                global_step=sess.run(global_step))
