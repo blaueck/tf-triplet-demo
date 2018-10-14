@@ -311,7 +311,7 @@ if __name__ == '__main__':
                         type=float, help='validate split rate')
 
     parser.add_argument('--model', default='resnet_20', help='model name')
-    parser.add_argument('--n_feats', default=2, help='the model should output n feats, n >= 2')
+    parser.add_argument('--n_feats', default=2, type=int, help='the model should output n feats, n >= 2')
 
     parser.add_argument('--n_class_per_iter', default=8, type=int, help='n class per iter')
     parser.add_argument('--n_img_per_class', default=16, type=int, help='n img per class')
